@@ -2,7 +2,7 @@
 
 A metrically compatible replacement for Raster Gothic Condensed in Pebble font format.
 
-Please see the [wiki](https://github.io/pebble-dev/renaissance/wiki) for more information.
+Please see the [wiki](https://github.com/pebble-dev/renaissance/wiki) for more information.
 
 While this project is still in its earliest stages, here are some thoughts on the font design process:
 
