@@ -152,8 +152,12 @@ class FontReader:
 
         # ----------------------------------------------------------------------
 
+        glyph_list.sort(key=lambda a: a['codepoint'])
+
         print('Processed %d bytes.' % fh.bytes_read, file=sys.stderr)
-        return glyph_list
+        return {'line-height': max_height,
+                'fallback': fallback_codepoint,
+                'glyphs': glyph_list}
 
 
 if __name__ == "__main__":
@@ -169,4 +173,4 @@ if __name__ == "__main__":
                 print('file named', os.path.split(f)[-1],
                       'already processed; skipping')
             data[os.path.split(f)[-1]] = r.read(fh)
-    print(json.dumps(data))
+    json.dump(data, sys.stdout, indent=2)
