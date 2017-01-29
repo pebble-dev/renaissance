@@ -141,7 +141,7 @@ class FontReader:
              left,
              top,
              advance) = struct.unpack(
-                '<BBBBBxxx', glyph_data[glyph['offset']:glyph['offset'] + 8])
+                '<BBbbbxxx', glyph_data[glyph['offset']:glyph['offset'] + 8])
             glyph_list += [{'character': chr(glyph['codepoint']),
                             'codepoint': glyph['codepoint'],
                             'width': width,
@@ -160,7 +160,7 @@ class FontReader:
                 'glyphs': glyph_list}
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('files', nargs='+',
                         help='files to be parsed')
