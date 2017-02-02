@@ -1,5 +1,7 @@
 # Renaissance
 
+![An image showing a comparison between different sizes of the font.](samples.png)
+
 A (mostly) metrically compatible replacement for Raster Gothic Condensed in Pebble font format.
 
 Please see the [wiki](https://github.com/pebble-dev/renaissance/wiki) for more information.
