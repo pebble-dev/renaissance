@@ -6,15 +6,6 @@ A (mostly) metrically compatible replacement for Raster Gothic Condensed in Pebb
 
 Please see the [wiki](https://github.com/pebble-dev/renaissance/wiki) for more information.
 
-While this project is still in its earliest stages, here are some thoughts on the font design process:
-
-- Encoding the font source in plain text files is preferable because it allows viewing and editing with small overhead.
-- A tool should be written to convert aforementioned text files to font files (described [here](https://github.com/pebble-dev/wiki/wiki/Firmware-Font-Format))
-- Use `metrics.py` to extract metrics information from font files.
-  I've extracted metrics for all Gothic fonts and placed this data into `metrics.json`.
-- Use `merge_pbff.py` to merge two pbff files, taking actual character shapes from the first and character metadata (eg positioning) from the second.
-    - Use this when you're starting work on a new font size: simply merge in the glyph data from the smaller size.
-
 ## Metrical Compatibility
 
 Renaissance needs to be _mostly_ metrically compatible. This means that the
@@ -33,8 +24,8 @@ font (especially concerning diacritics), _please_ let me know!
 Here are some guidelines for Renaissance's design:
 
 - No stroke modulation (all strokes in a glyph should be the same width)
-    - Except diacritics in small font sizes & certain characters like @
-- Grotesque style
+    - Except diacritics & certain characters like @, especially in small sizes.
+- Grotesque-ish style
 - Comparatively short ascenders/descenders (1/3 to 1/2 x-height.)
 - Legibility is just as important as consistency.
 - When a diacritic can't be centered over a character, move it right.
@@ -44,7 +35,9 @@ Here are some guidelines for Renaissance's design:
   missing the `×` character)
     - Exception: Renaissance 9 needn't contain all diacritics because they may
       be hard to tell apart at that size.
-- Carons must _always_ be distinguishable from breves.
+- Carons must _always_ be distinguishable from breves. (NB: Breves don't exist in 09.)
+- Renaissance aims for friendlier-looking lowercase letters like `b` in large
+  sizes, meaning that the curvature of the bowl should be the same on both sides.
 
 
 ## Copyright concerns

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 
+
+###############################################################################
+#                                                                             #
+#              Reads font files and outputs metrics json data                 #
+#                     file based on the font metrics.                         #
+#                                                                             #
+###############################################################################
+
 import argparse
 import json
 import os.path
