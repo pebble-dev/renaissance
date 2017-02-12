@@ -14,7 +14,7 @@ body {
 }
 
 canvas {
-    /*image-rendering: pixelated;*/
+    image-rendering: pixelated;
     margin-left: -2px;
     margin-right: -2px;
 }
@@ -37,7 +37,15 @@ canvas {
 }
 
 .hero .front canvas {
+    height: 66px;
     filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.2));
+}
+
+@media screen and (max-width: 640px) {
+    .hero .front canvas {
+        height: 33px;
+        margin-top: 23px;
+    }
 }
 
 .hero .backdrop {

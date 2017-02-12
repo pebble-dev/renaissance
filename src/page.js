@@ -1,7 +1,7 @@
 let scrollItems = []
 
 function addHeroParallax(item, strength) {
-    let calculateOffset = (a) => ('translate(0, ' + Math.round(a * strength) + 'px)');
+    let calculateOffset = (a) => ('translate(0, ' + (a * strength) + 'px)');
     scrollItems.push((a) => { item.style.transform = calculateOffset(a); })
     item.style.transform = calculateOffset(window.scrollY);
 }
