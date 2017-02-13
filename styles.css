@@ -118,7 +118,7 @@ canvas {
         color: #fff;
         overflow: visible;
         position: relative;
-        filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.2));
+        filter: none;
     }
     .section .top:before {
         content: " ";
